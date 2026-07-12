@@ -42,9 +42,21 @@ export default function Footer() {
         </a>
       </div>
 
-      <p className="text-center text-xs text-ink-soft/60 mt-8">
-        © {new Date().getFullYear()} {studio.name} {studio.brand}. Todos os direitos reservados.
-      </p>
+      <div className="mt-8 flex flex-col items-center gap-2 text-xs text-ink-soft/60">
+        <p>
+          © {new Date().getFullYear()} {studio.name} {studio.brand}. Todos os
+          direitos reservados.
+        </p>
+        <p className="flex items-center gap-1.5 flex-wrap justify-center">
+          Site desenvolvido por
+          <img
+            src="/codigo-alpha-logo.png"
+            alt="Código Alpha"
+            className="h-5 w-auto align-middle"
+          />
+          . Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
   );
 }
