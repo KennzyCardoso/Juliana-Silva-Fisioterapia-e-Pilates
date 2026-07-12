@@ -1,6 +1,11 @@
 import { Phone, MapPin } from "lucide-react";
 import { studio } from "../data/studio";
 
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  studio.mapsQuery
+)}`;
+const telHref = `tel:+${studio.whatsapp}`;
+
 function InstagramIcon(props) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
@@ -20,16 +25,24 @@ export default function Footer() {
           <p className="text-sm text-ink-soft">{studio.brand}</p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-ink-soft">
-          <span className="flex items-center gap-2">
+        <address className="flex flex-col sm:flex-row items-center gap-4 text-sm text-ink-soft not-italic">
+          <a
+            href={mapsHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-clay transition-colors"
+          >
             <MapPin size={16} className="text-clay" />
             {studio.address}
-          </span>
-          <span className="flex items-center gap-2">
+          </a>
+          <a
+            href={telHref}
+            className="flex items-center gap-2 hover:text-clay transition-colors"
+          >
             <Phone size={16} className="text-clay" />
             {studio.phoneDisplay}
-          </span>
-        </div>
+          </a>
+        </address>
 
         <a
           href={studio.instagram}
