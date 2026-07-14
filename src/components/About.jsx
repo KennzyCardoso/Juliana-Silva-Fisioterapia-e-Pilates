@@ -2,8 +2,12 @@ export default function About() {
   return (
     <section id="sobre" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="order-2 md:order-1 aspect-square rounded-[2rem] bg-gradient-to-br from-clay/15 to-olive/15 border border-sand flex items-center justify-center">
-          <p className="text-ink-soft/50 text-sm">foto da Juliana em breve</p>
+        <div className="order-2 md:order-1 aspect-square rounded-[2rem] bg-gradient-to-br from-clay/15 to-olive/15 border border-sand flex items-center justify-center p-16">
+          <img
+            src="/logo-juliana-silva-selo.png"
+            alt="Selo Juliana Silva Fisioterapia e Pilates"
+            className="w-full h-full object-contain opacity-80"
+          />
         </div>
 
         <div className="order-1 md:order-2">

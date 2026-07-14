@@ -15,11 +15,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-sand">
       <div className="mx-auto max-w-6xl px-6 h-18 flex items-center justify-between py-3">
-        <a href="#top" className="font-display text-lg text-ink">
-          Juliana Silva
-          <span className="block text-xs font-sans tracking-wide text-ink-soft">
-            Fisioterapia e Pilates
-          </span>
+        <a href="#top" className="flex items-center">
+          <img
+            src="/logo-juliana-silva.png"
+            alt="Juliana Silva Fisioterapia e Pilates"
+            className="h-14 w-auto"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

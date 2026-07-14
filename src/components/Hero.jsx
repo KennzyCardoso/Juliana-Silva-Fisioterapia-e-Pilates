@@ -50,15 +50,16 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          <div className="aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-olive/20 to-clay/20 border border-sand flex items-center justify-center overflow-hidden">
-            <div className="text-center px-8">
-              <p className="font-display text-2xl text-ink-soft/60">
-                {studio.name}
-              </p>
-              <p className="text-sm text-ink-soft/50 mt-2">
-                foto do studio em breve
-              </p>
-            </div>
+          <div className="aspect-[4/5] rounded-[2rem] border border-sand overflow-hidden">
+            <video
+              className="h-full w-full object-cover"
+              src="/video-espaco.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label={`Vídeo do espaço do studio ${studio.name}`}
+            />
           </div>
         </div>
       </div>
