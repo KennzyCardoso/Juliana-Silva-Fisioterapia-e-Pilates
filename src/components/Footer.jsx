@@ -67,7 +67,6 @@ export default function Footer() {
             alt="Código Alpha"
             className="h-5 w-auto align-middle"
           />
-          . Todos os direitos reservados.
         </p>
       </div>
     </footer>
