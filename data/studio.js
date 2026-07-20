@@ -110,8 +110,8 @@ export const gallery = [
   },
   {
     type: "video",
-    src: "/video-fisioterapia-geriatrica.mp4",
-    caption: "Fisioterapia geriátrica",
+    src: "/video-pilates.mp4",
+    caption: "Pilates na terceira idade",
   },
   {
     type: "video",
