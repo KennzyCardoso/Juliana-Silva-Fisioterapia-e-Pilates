@@ -14,6 +14,10 @@ export function whatsappLink(message) {
   return `https://wa.me/${studio.whatsapp}?text=${text}`;
 }
 
+export const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  studio.mapsQuery
+)}`;
+
 export const hero = {
   eyebrow: "Studio no Centro de Castanhal",
   headline: "O tratamento começa ouvindo o que o seu corpo tem a dizer.",

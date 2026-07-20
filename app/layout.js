@@ -1,4 +1,5 @@
 import { Fraunces, Inter } from "next/font/google";
+import { studio } from "@/data/studio";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -30,10 +31,46 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "ExerciseGym"],
+  name: `${studio.name} ${studio.brand}`,
+  image: "https://jsfisioterapiaepilates.vercel.app/foto-juliana-studio.jpg",
+  url: "https://jsfisioterapiaepilates.vercel.app",
+  telephone: `+${studio.whatsapp}`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "R. Cel. Leal, 953 - Centro",
+    addressLocality: "Castanhal",
+    addressRegion: "PA",
+    postalCode: "68743-070",
+    addressCountry: "BR",
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+    ],
+    opens: "08:00",
+    closes: "19:00",
+  },
+  sameAs: [studio.instagram],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${fraunces.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

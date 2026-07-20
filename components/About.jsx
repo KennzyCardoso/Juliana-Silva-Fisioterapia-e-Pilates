@@ -26,14 +26,13 @@ export default function About() {
           ))}
         </div>
 
-        {/* Reservado para foto real da Juliana/studio (proporção 4/5, trocar por next/image) */}
-        <div className="md:col-span-5 aspect-[4/5] rounded-tr-[3rem] rounded-bl-[3rem] bg-sand border border-ink/10 flex items-center justify-center">
+        <div className="md:col-span-5 relative aspect-[4/5] rounded-tr-[3rem] rounded-bl-[3rem] overflow-hidden border border-ink/10 bg-sand">
           <Image
-            src="/logo-juliana-silva-selo.png"
-            alt="Selo Juliana Silva Fisioterapia e Pilates"
-            width={120}
-            height={120}
-            className="w-24 h-24 object-contain opacity-40"
+            src="/foto-juliana-studio.jpg"
+            alt="Juliana Silva no studio, durante uma sessão de Pilates"
+            fill
+            sizes="(min-width: 768px) 40vw, 90vw"
+            className="object-cover"
           />
         </div>
       </div>

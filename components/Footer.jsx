@@ -1,10 +1,7 @@
 import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";
-import { studio } from "@/data/studio";
+import { studio, mapsHref } from "@/data/studio";
 
-const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  studio.mapsQuery
-)}`;
 const telHref = `tel:+${studio.whatsapp}`;
 
 function InstagramIcon(props) {

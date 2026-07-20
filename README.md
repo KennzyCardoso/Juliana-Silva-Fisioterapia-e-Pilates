@@ -24,5 +24,5 @@ npm run start
 
 ## Conteúdo a atualizar
 
-- `data/studio.js` — dados do studio (endereço, telefone, horários, serviços, textos das seções).
-- A seção "Sobre" (`components/About.jsx`) tem um espaço reservado (proporção 4/5) esperando uma foto real da Juliana ou do studio — hoje mostra só o selo da marca. Assim que houver a foto, trocar o conteúdo desse bloco por um `next/image` apontando para o arquivo em `public/`.
+- `data/studio.js` — dados do studio (endereço, telefone, horários, serviços, textos das seções). O JSON-LD (`app/layout.js`) usa os mesmos dados — se o endereço/telefone mudar, atualizar os dois.
+- `public/video-fisioterapia-geriatrica.mp4` e `public/video-desafio-copo.mp4` — clipes reais do Instagram já estão em `public/`, mas ainda não usados em nenhuma seção. Bons candidatos para uma futura seção de "bastidores"/galeria.

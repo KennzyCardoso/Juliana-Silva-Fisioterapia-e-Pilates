@@ -1,5 +1,5 @@
 import { MessageCircle, MapPin, Star } from "lucide-react";
-import { whatsappLink, hero, studio } from "@/data/studio";
+import { whatsappLink, hero, studio, mapsHref } from "@/data/studio";
 
 export default function Hero() {
   return (
@@ -33,14 +33,19 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-9 flex items-center gap-2 text-sm text-ink-soft">
+          <a
+            href={mapsHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-9 inline-flex items-center gap-2 text-sm text-ink-soft hover:text-clay transition-colors"
+          >
             <div className="flex text-clay">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
               ))}
             </div>
             Avaliações reais de pacientes no Google
-          </div>
+          </a>
         </div>
 
         <div className="md:col-span-5 relative">
@@ -48,12 +53,12 @@ export default function Hero() {
           <div className="aspect-[4/5] rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden bg-sand">
             <video
               className="h-full w-full object-cover"
-              src="/video-espaco.mp4"
+              src="/video-sessao-pilates.mp4"
               autoPlay
               muted
               loop
               playsInline
-              aria-label={`Vídeo do espaço do studio ${studio.name}`}
+              aria-label={`Vídeo de uma sessão no studio ${studio.name}`}
             />
           </div>
         </div>
