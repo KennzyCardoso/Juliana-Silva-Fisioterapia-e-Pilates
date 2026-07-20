@@ -6,12 +6,23 @@ export default function About() {
     <section id="sobre" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="grid md:grid-cols-12 gap-12 md:gap-8 items-start">
         <div className="md:col-span-7">
-          <span className="text-xs uppercase tracking-widest text-olive font-semibold">
-            Sobre
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl text-ink mt-3">
-            Juliana Silva
-          </h2>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/juliana-avatar.jpg"
+              alt="Juliana Silva"
+              width={150}
+              height={150}
+              className="w-14 h-14 rounded-full object-cover border border-ink/10"
+            />
+            <div>
+              <span className="text-xs uppercase tracking-widest text-olive font-semibold">
+                Sobre
+              </span>
+              <h2 className="font-display text-2xl md:text-3xl text-ink mt-1">
+                Juliana Silva
+              </h2>
+            </div>
+          </div>
           {about.paragraphs.map((paragraph, i) => (
             <p
               key={i}
