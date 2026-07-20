@@ -111,7 +111,7 @@ export const gallery = [
   {
     type: "video",
     src: "/video-pilates.mp4",
-    caption: "Pilates na terceira idade",
+    caption: "Pilates, no ritmo de cada aluno",
   },
   {
     type: "video",
