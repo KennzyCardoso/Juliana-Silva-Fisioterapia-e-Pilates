@@ -1,9 +1,11 @@
+import Image from "next/image";
 import { gallery, studio } from "@/data/studio";
 
 const radii = [
   "rounded-tl-[2.5rem] rounded-br-[2.5rem]",
   "rounded-tr-[2.5rem] rounded-bl-[2.5rem]",
   "rounded-tl-[2.5rem] rounded-br-[2.5rem]",
+  "rounded-tr-[2.5rem] rounded-bl-[2.5rem]",
 ];
 
 export default function Gallery() {
@@ -19,21 +21,31 @@ export default function Gallery() {
           </h2>
         </div>
 
-        <div className="mt-14 grid sm:grid-cols-3 gap-8">
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {gallery.map((item, i) => (
             <div key={item.src}>
               <div
-                className={`aspect-[9/16] overflow-hidden border border-ink/10 bg-cream-light ${radii[i % radii.length]}`}
+                className={`relative aspect-[9/16] overflow-hidden border border-ink/10 bg-cream-light ${radii[i % radii.length]}`}
               >
-                <video
-                  className="h-full w-full object-cover"
-                  src={item.src}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  aria-label={`${item.caption} — studio ${studio.name}`}
-                />
+                {item.type === "image" ? (
+                  <Image
+                    src={item.src}
+                    alt={`${item.caption} — studio ${studio.name}`}
+                    fill
+                    sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 90vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <video
+                    className="h-full w-full object-cover"
+                    src={item.src}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    aria-label={`${item.caption} — studio ${studio.name}`}
+                  />
+                )}
               </div>
               <p className="mt-3 text-sm text-ink-soft">{item.caption}</p>
             </div>

@@ -35,7 +35,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["MedicalBusiness", "ExerciseGym"],
   name: `${studio.name} ${studio.brand}`,
-  image: "https://jsfisioterapiaepilates.vercel.app/foto-juliana-studio.jpg",
+  image: "https://jsfisioterapiaepilates.vercel.app/logo-juliana-silva.png",
   url: "https://jsfisioterapiaepilates.vercel.app",
   telephone: `+${studio.whatsapp}`,
   address: {

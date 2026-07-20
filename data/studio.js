@@ -99,14 +99,22 @@ export const differentials = [
 
 export const gallery = [
   {
+    type: "video",
     src: "/video-espaco.mp4",
     caption: "O espaço",
   },
   {
+    type: "image",
+    src: "/foto-sessao-reformer.jpg",
+    caption: "Sessão de Pilates no Reformer",
+  },
+  {
+    type: "video",
     src: "/video-fisioterapia-geriatrica.mp4",
     caption: "Fisioterapia geriátrica",
   },
   {
+    type: "video",
     src: "/video-desafio-copo.mp4",
     caption: "Desafio do copo no Reformer",
   },
