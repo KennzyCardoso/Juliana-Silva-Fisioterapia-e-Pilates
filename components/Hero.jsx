@@ -1,26 +1,20 @@
 import { MessageCircle, MapPin, Star } from "lucide-react";
-import { whatsappLink, studio } from "../data/studio";
+import { whatsappLink, hero, studio } from "@/data/studio";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-sand/60 via-cream to-cream" />
-
-      <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <span className="inline-block text-xs uppercase tracking-widest text-olive font-semibold mb-4">
-            Castanhal - PA
+    <section id="top" className="relative">
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-24 grid md:grid-cols-12 gap-12 md:gap-8 items-center">
+        <div className="md:col-span-7">
+          <span className="inline-block text-xs uppercase tracking-widest text-olive font-semibold mb-5">
+            {hero.eyebrow}
           </span>
-          <h1 className="font-display text-4xl md:text-5xl leading-tight text-ink">
-            Cuide do seu corpo com quem entende de movimento
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-ink max-w-xl">
+            {hero.headline}
           </h1>
-          <p className="mt-5 text-lg text-ink-soft max-w-md">
-            Fisioterapia e Pilates em um espaço acolhedor, com atendimento
-            individualizado para aliviar sua dor, recuperar sua mobilidade e
-            fortalecer seu corpo.
-          </p>
+          <p className="mt-6 text-lg text-ink-soft max-w-md">{hero.subtext}</p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <div className="mt-9 flex flex-col sm:flex-row gap-4">
             <a
               href={whatsappLink("Olá! Vim pelo site e quero agendar uma avaliação.")}
               target="_blank"
@@ -39,7 +33,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-2 text-sm text-ink-soft">
+          <div className="mt-9 flex items-center gap-2 text-sm text-ink-soft">
             <div className="flex text-clay">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
@@ -49,8 +43,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="aspect-[4/5] rounded-[2rem] border border-sand overflow-hidden">
+        <div className="md:col-span-5 relative">
+          <div className="absolute -inset-3 border border-olive/25 rounded-tl-[3rem] rounded-br-[3rem] -z-10" />
+          <div className="aspect-[4/5] rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden bg-sand">
             <video
               className="h-full w-full object-cover"
               src="/video-espaco.mp4"

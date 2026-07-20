@@ -1,6 +1,6 @@
 # Juliana Silva — Fisioterapia e Pilates
 
-Landing page em React + Vite + Tailwind CSS.
+Site em Next.js (App Router) + Tailwind CSS.
 
 ## Desenvolvimento
 
@@ -13,18 +13,16 @@ npm run dev
 
 ```bash
 npm run build
-npm run start   # serve a pasta dist/ na porta $PORT (padrão 3000)
+npm run start
 ```
 
-## Deploy no Railway
+## Deploy na Vercel
 
-O repositório já tem um `Dockerfile` pronto. No Railway:
-
-1. Crie um novo projeto e aponte para este repositório (ou use `railway up` via CLI a partir desta pasta).
-2. O Railway detecta o `Dockerfile` automaticamente e faz o build/deploy.
-3. Não é necessária nenhuma variável de ambiente — a porta é injetada automaticamente pelo Railway via `$PORT`.
+1. Importe este repositório na Vercel (New Project → seleciona o repo).
+2. A Vercel detecta o Next.js automaticamente — não é necessária nenhuma configuração extra.
+3. Cada push na branch principal gera um novo deploy.
 
 ## Conteúdo a atualizar
 
-- `src/data/studio.js` — dados do studio (endereço, telefone, horários, serviços).
-- Fotos reais do espaço e da Juliana ainda precisam substituir os placeholders em `Hero.jsx` e `About.jsx`.
+- `data/studio.js` — dados do studio (endereço, telefone, horários, serviços, textos das seções).
+- A seção "Sobre" (`components/About.jsx`) tem um espaço reservado (proporção 4/5) esperando uma foto real da Juliana ou do studio — hoje mostra só o selo da marca. Assim que houver a foto, trocar o conteúdo desse bloco por um `next/image` apontando para o arquivo em `public/`.

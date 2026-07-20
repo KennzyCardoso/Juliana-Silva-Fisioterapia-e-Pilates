@@ -1,6 +1,9 @@
+"use client";
+
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { studio, whatsappLink } from "../data/studio";
+import { whatsappLink } from "@/data/studio";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -13,13 +16,16 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-sand">
+    <header className="sticky top-0 z-50 bg-cream border-b border-ink/10">
       <div className="mx-auto max-w-6xl px-6 h-18 flex items-center justify-between py-3">
         <a href="#top" className="flex items-center">
-          <img
+          <Image
             src="/logo-juliana-silva.png"
             alt="Juliana Silva Fisioterapia e Pilates"
-            className="h-14 w-auto"
+            width={56}
+            height={56}
+            className="h-14 w-14 object-contain"
+            priority
           />
         </a>
 
@@ -55,7 +61,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="md:hidden border-t border-sand bg-cream px-6 py-4 flex flex-col gap-4">
+        <nav className="md:hidden border-t border-ink/10 bg-cream px-6 py-4 flex flex-col gap-4">
           {links.map((link) => (
             <a
               key={link.href}

@@ -1,10 +1,10 @@
 import { MessageCircle } from "lucide-react";
-import { whatsappLink } from "../data/studio";
+import { whatsappLink, finalCta } from "@/data/studio";
 
 export default function FinalCta() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <div className="relative rounded-[2rem] overflow-hidden px-8 py-20 text-center">
+      <div className="relative rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden px-8 py-16 md:px-14 md:py-20 min-h-[24rem] flex items-end">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           src="/video-renove-energias.mp4"
@@ -14,16 +14,13 @@ export default function FinalCta() {
           playsInline
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-olive-dark/85" />
+        <div className="absolute inset-0 bg-gradient-to-t from-olive-dark/95 via-olive-dark/50 to-transparent" />
 
-        <div className="relative">
+        <div className="relative max-w-lg">
           <h2 className="font-display text-3xl md:text-4xl text-cream-light">
-            Pronto para renovar suas energias?
+            {finalCta.headline}
           </h2>
-          <p className="mt-4 text-cream-light/80 max-w-xl mx-auto">
-            Agende sua avaliação e dê o primeiro passo para uma vida com menos
-            dor e mais movimento.
-          </p>
+          <p className="mt-4 text-cream-light/80">{finalCta.subtext}</p>
           <a
             href={whatsappLink("Olá! Vim pelo site e quero agendar uma avaliação.")}
             target="_blank"

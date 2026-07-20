@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import { whatsappLink } from "../data/studio";
+import { whatsappLink } from "@/data/studio";
 
 export default function WhatsappFloat() {
   return (

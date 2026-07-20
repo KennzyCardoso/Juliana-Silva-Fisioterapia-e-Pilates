@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";
-import { studio } from "../data/studio";
+import { studio } from "@/data/studio";
 
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   studio.mapsQuery
@@ -18,7 +19,7 @@ function InstagramIcon(props) {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-sand py-10">
+    <footer className="border-t border-ink/10 py-10">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
           <p className="font-display text-lg text-ink">{studio.name}</p>
@@ -62,9 +63,11 @@ export default function Footer() {
         </p>
         <p className="flex items-center gap-1.5 flex-wrap justify-center">
           Site desenvolvido por
-          <img
+          <Image
             src="/codigo-alpha-logo.png"
             alt="Código Alpha"
+            width={58}
+            height={20}
             className="h-5 w-auto align-middle"
           />
         </p>
