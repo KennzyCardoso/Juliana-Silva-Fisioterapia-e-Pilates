@@ -97,6 +97,21 @@ export const differentials = [
   },
 ];
 
+export const gallery = [
+  {
+    src: "/video-espaco.mp4",
+    caption: "O espaço",
+  },
+  {
+    src: "/video-fisioterapia-geriatrica.mp4",
+    caption: "Fisioterapia geriátrica",
+  },
+  {
+    src: "/video-desafio-copo.mp4",
+    caption: "Desafio do copo no Reformer",
+  },
+];
+
 export const location = {
   intro:
     "No Centro de Castanhal, em um espaço pensado para o atendimento individual.",
