@@ -27,7 +27,7 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    "Sou fisioterapeuta e uno fisioterapia e Pilates para tratar a causa da dor, não só o sintoma do dia. Todo atendimento começa com uma avaliação de verdade — sem pular direto para um protocolo padrão.",
+    "Sou fisioterapeuta e alio fisioterapia e Pilates para tratar a causa da dor, não só o sintoma do dia. Todo atendimento começa com uma avaliação de verdade — sem pular direto para um protocolo padrão.",
     "Isso significa sessões pensadas para o seu momento: se hoje o corpo pede mobilidade, trabalhamos mobilidade; se pede fortalecimento, é isso que entra no plano. Sempre olhando como você está respondendo, não seguindo um roteiro fixo.",
   ],
 };
