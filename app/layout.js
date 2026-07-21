@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://jsfisioterapiaepilates.vercel.app"),
+  metadataBase: new URL("https://www.jsfisioterapiaepilates.com.br"),
   title: "Juliana Silva Fisioterapia e Pilates | Castanhal - PA",
   description:
     "Juliana Silva Fisioterapia e Pilates - Studio em Castanhal/PA. Fisioterapia traumato-ortopédica, desportiva, geriátrica, Pilates, Mat Pilates e mais. Agende sua avaliação.",
@@ -35,8 +35,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["MedicalBusiness", "ExerciseGym"],
   name: `${studio.name} ${studio.brand}`,
-  image: "https://jsfisioterapiaepilates.vercel.app/logo-juliana-silva.png",
-  url: "https://jsfisioterapiaepilates.vercel.app",
+  image: "https://www.jsfisioterapiaepilates.com.br/logo-juliana-silva.png",
+  url: "https://www.jsfisioterapiaepilates.com.br",
   telephone: `+${studio.whatsapp}`,
   address: {
     "@type": "PostalAddress",
